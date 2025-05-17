@@ -18,5 +18,11 @@ public class IdentityHashMapDemo {
         map.put(k2,2);
 
         System.out.println(map);
+
+        System.out.println(System.identityHashCode(k1));// identity hashmap
+        System.out.println(System.identityHashCode(k2));// identity hashmap
+
+        System.out.println(k1.hashCode());
+        System.out.println(k2.hashCode());
     }
 }
