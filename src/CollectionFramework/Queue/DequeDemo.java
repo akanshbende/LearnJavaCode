@@ -83,5 +83,21 @@ public class DequeDemo {
 
         System.out.println("Removed first: " + deque1.pollFirst()); // C
         System.out.println("Removed last: " + deque1.pollLast());   // B
+
+        /*
+        * | Feature           | `ArrayDeque`     | `LinkedList`       |
+| ----------------- | ---------------- | ------------------ |
+| Backing Structure | Resizable Array  | Doubly Linked List |
+| Memory Overhead   | Lower            | Higher             |
+| Null Elements     | Not allowed      | Allowed            |
+| Performance       | Generally faster | Slightly slower    |
+| Thread Safety     | Not thread-safe  | Not thread-safe    |
+
+*
+* Recommendation:
+Use ArrayDeque for most use cases unless you specifically need:
+frequent insertions/removals in the middle (then use LinkedList)
+null elements (which only LinkedList supports)
+* */
     }
 }
